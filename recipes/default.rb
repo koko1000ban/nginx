@@ -25,7 +25,7 @@ when 'source'
   include_recipe 'nginx::source'
 when 'package'
   case node['platform']
-  when 'redhat','centos','scientific','amazon','oracle'
+  when 'redhat','centos','scientific','oracle'
     include_recipe 'yum::epel'
   end
   package node['nginx']['package_name']
